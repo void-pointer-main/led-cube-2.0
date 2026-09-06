@@ -1,0 +1,9 @@
+build
+!.vscode/*
+
+*.py
+__pycache__
+venv
+
+vowels.*
+output
