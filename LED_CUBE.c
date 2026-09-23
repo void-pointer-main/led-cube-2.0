@@ -41,9 +41,6 @@ int main() {
 
     sleep_ms(500); // wait for mpu to calibrate
 
-    precompute_mel_indicies();
-    precompute_dct_coefficients();
-
     ws2812_init();
 
     uint64_t previous_time_us = 0;
@@ -63,6 +60,7 @@ int main() {
             if (tap.double_tap) {
                 release_state(state);
                 state = (state + 1) % NUM_STATES;
+                printf("state: %d\n", state);
                 init_state(state);
             } else if (state == OSCILLOSCOPE) {
                 oscilloscope_change_sampling_frequency_index(1);
