@@ -50,7 +50,6 @@ add_executable(LED_CUBE LED_CUBE.c
     oscilloscope.c
     tap_hint.c
     advanced_tap_detection_helper.c
-    vowels.c
 )
 
 pico_set_program_name(LED_CUBE "LED_CUBE")
